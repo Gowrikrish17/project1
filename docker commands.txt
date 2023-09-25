@@ -1,0 +1,10 @@
+docker ps
+docker run -dit e2bfe021731f
+docker ps | grep containerid
+docker ps -a
+docker exec -it e2bfe021731f /bin/bash
+docker ps
+
+vi Dockerfile
+docker build . -t employee buil1.0
+docker run --name employee -d -p 8087:80 employee
