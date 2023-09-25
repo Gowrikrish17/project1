@@ -1,0 +1,14 @@
+---
+- name: Ansible plybook to install and configure puppet 
+  hosts: kslave1
+  become: yes
+  tasks:
+   - name: Install and configure puppet agent
+     apt:
+      name: puppet
+      state: present
+  tasks:
+   - name: Install docker 
+     apt:
+      name: docker
+      state: present
